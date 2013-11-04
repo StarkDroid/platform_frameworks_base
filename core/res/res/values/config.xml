@@ -2437,4 +2437,11 @@
      <!-- Keypress Optimization -->
     <bool name="config_enableKeypressOptimization">false</bool>
     <integer-array name="keypress_param_value"/>
+
+    <!-- Boolean to enable stk functionality on Samsung phones -->
+    <bool name="config_samsung_stk">false</bool>
+
+    <!-- The list of components which should be automatically disabled. -->
+    <string-array name="config_disabledComponents" translatable="false">
+    </string-array>
 </resources>
