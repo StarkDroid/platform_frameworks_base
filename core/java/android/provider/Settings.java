@@ -2661,13 +2661,6 @@ public final class Settings {
          */
         public static final String VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
 
-        /**
-         * The delay when killing the app on long press takes place
-         *
-         * @hide
-         */
-        public static final String LONG_PRESS_KILL_DELAY = "long_press_kill_delay";
-
        /**
 	* Network traffic indicator, goes from least to greatest significant bitwise
 	* 0 = Display up-stream traffic if set
@@ -2695,6 +2688,13 @@ public final class Settings {
          * @hide
          */
         public static final String SAFE_HEADSET_VOLUME = "safe_headset_volume";
+
+        /**
+         * Volume key controls ringtone or media sound stream
+         *
+         * @hide
+         */
+        public static final String VOLUME_KEYS_CONTROL_MEDIA_STREAM = "volume_keys_control_media_stream";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
