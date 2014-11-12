@@ -5195,4 +5195,7 @@
     <string name="def_wifi_wifihotspot_pass" translatable="false"></string>
     <!-- Default wi-fi direct name -->
     <string name="def_wifi_direct_name" translatable="false"></string>
+
+    <!-- kill app long press back -->
+    <string name="app_killed_message">Application killed.</string>
 </resources>
