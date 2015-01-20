@@ -1242,6 +1242,11 @@ public final class Settings {
 
             // At one time in System, then Global, but now back in Secure
             MOVED_TO_SECURE.add(Secure.INSTALL_NON_MARKET_APPS);
+
+            /* CM12 CHANGES */
+            MOVED_TO_SECURE.add(Secure.VOLUME_LINK_NOTIFICATION);
+            MOVED_TO_SECURE.add(Secure.QS_TILES);
+            MOVED_TO_SECURE.add(Secure.QS_USE_MAIN_TILES);
         }
 
         private static final HashSet<String> MOVED_TO_GLOBAL;
@@ -2067,16 +2072,17 @@ public final class Settings {
         public static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
 
         /**
-         * List of QS tile names
+	 Deprecated Use {@link android.provider.Settings.Secure.QS_TILES}
          * @hide
          */
+        @Deprecated
         public static final String QS_TILES = "sysui_qs_tiles";
 
         /**
-         * Use "main" tiles on the first row of the quick settings panel
-         * 0 = no, 1 = yes
+         * Deprecated Use {@link android.provider.Settings.Secure.QS_USE_MAIN_TILES}
          * @hide
          */
+        @Deprecated
         public static final String QS_USE_MAIN_TILES = "sysui_qs_main_tiles";
 
         /**
@@ -5132,6 +5138,19 @@ public final class Settings {
           * @hide
           */
         public static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
+
+        /**
+         * List of QS tile names
+         * @hide
+         */
+        public static final String QS_TILES = "sysui_qs_tiles";
+
+        /**
+         * Use "main" tiles on the first row of the quick settings panel
+         * 0 = no, 1 = yes
+         * @hide
+         */
+        public static final String QS_USE_MAIN_TILES = "sysui_qs_main_tiles";
 
         /**
          * This are the settings to be backed up.
