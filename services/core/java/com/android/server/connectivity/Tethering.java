@@ -1268,6 +1268,12 @@ public class Tethering extends BaseNetworkObserver {
                         if (VDBG) Log.e(TAG, "Exception in forceUpdate: " + e.toString());
                     }
                     try {
+                        mNMService.stopInterfaceForwarding(mIfaceName, mMyUpstreamIfaceName);
+                    } catch (Exception e) {
+                        if (VDBG) Log.e(
+                                TAG, "Exception in removeInterfaceForward: " + e.toString());
+                    }
+                    try {
                         if(VDBG) Log.d(TAG, "Disabling NAT - Tethered Iface = " + mIfaceName +
                                             " mMyUpstreamIfaceName= " + mMyUpstreamIfaceName);
                         mNMService.disableNat(mIfaceName, mMyUpstreamIfaceName);
@@ -1336,8 +1342,13 @@ public class Tethering extends BaseNetworkObserver {
                                                        mIfaceName,
                                                        AF_INET,
                                                        UpstreamInfoUpdateType.UPSTREAM_IFACE_ADDED);
+                                mNMService.startInterfaceForwarding(mIfaceName,
+                                        newUpstreamIfaceName);
                             } catch (Exception e) {
                                 Log.e(TAG, "Exception enabling Nat: " + e.toString());
+                                try {
+                                    mNMService.disableNat(mIfaceName, newUpstreamIfaceName);
+                                } catch (Exception ee) {}
                                 try {
                                     mNMService.untetherInterface(mIfaceName);
                                 } catch (Exception ee) {}
