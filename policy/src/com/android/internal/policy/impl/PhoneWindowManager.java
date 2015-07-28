@@ -1663,7 +1663,6 @@ public class PhoneWindowManager implements WindowManagerPolicy {
 
         }
         synchronized (mWindowManagerFuncs.getWindowManagerLock()) {
-            PolicyControl.reloadFromSetting(mContext);
 
             WindowManagerPolicyControl.reloadFromSetting(mContext);
 
