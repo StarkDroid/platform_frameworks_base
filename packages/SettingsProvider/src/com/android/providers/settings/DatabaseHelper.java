@@ -1897,12 +1897,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             upgradeVersion = 118;
         }
 
-        if (upgradeVersion < 119) {
-            moveSettingsToNewTable(db, TABLE_SYSTEM, TABLE_SECURE,
-                    new String[] { Settings.Secure.VOLUME_LINK_NOTIFICATION }, true);
-            upgradeVersion = 119;
-	}
-
 	if (upgradeVersion < 120) {
             String[] qsTiles = new String[] {
                     Settings.Secure.QS_TILES,
