@@ -15,7 +15,6 @@
      limitations under the License.
 -->
 <resources>
-
     <!-- Side padding for the status bar header -->
     <dimen name="notification_header_side_padding">@dimen/notification_side_padding</dimen>
 
