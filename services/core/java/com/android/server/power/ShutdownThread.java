@@ -762,6 +762,7 @@ public final class ShutdownThread extends Thread {
         } catch (Exception e) {
             Log.e(TAG, "Unknown exception while trying to invoke rebootOrShutdown");
         }
+ }
 
     private static Context getUiContext(Context context) {
         Context uiContext = null;
